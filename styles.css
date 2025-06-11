@@ -1,0 +1,88 @@
+/* Custom styles for the political ideology test */
+
+/* Form radio button styling */
+.form-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid #4b5563;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-radio:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.form-radio:hover {
+  border-color: #2563eb;
+}
+
+/* Progress bar animation */
+#progress-bar {
+  transition: width 0.3s ease-in-out;
+}
+
+/* Question container animation */
+#question-container {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#question-container.fade {
+  opacity: 0;
+}
+
+/* Results page styling */
+#political-compass {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Category score bars */
+.category-score-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  #landing-page,
+  #test-container,
+  button {
+    display: none;
+  }
+
+  #results-page {
+    display: block !important;
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepal Political Ideology Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Nepal Political Ideology Test
+        </h1>
+        <p class="text-xl text-gray-600">
+          Discover your political leanings in the Nepalese context
+        </p>
+      </header>
+
+      <div
+        id="landing-page"
+        class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8"
+      >
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold mb-6">
+            Welcome to the Political Ideology Test
+          </h2>
+          <p class="mb-8 text-gray-700">
+            This test will help you understand your political leanings based on
+            your views on various issues relevant to Nepal. The test covers five
+            main categories:
+          </p>
+          <ul class="text-left mb-8 space-y-2">
+            <li>• Economic Policy</li>
+            <li>• Social Values</li>
+            <li>• Government Role</li>
+            <li>• Foreign Policy</li>
+            <li>• Environmental Issues</li>
+          </ul>
+          <button
+            id="start-test"
+            class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Start Test
+          </button>
+        </div>
+      </div>
+
+      <div id="test-container" class="hidden max-w-3xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+              <h2 id="category-title" class="text-2xl font-semibold"></h2>
+              <span id="progress" class="text-gray-600"></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div
+                id="progress-bar"
+                class="bg-blue-600 h-2 rounded-full"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div class="flex justify-between mt-8">
+            <button
+              id="prev-btn"
+              class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors hidden"
+            >
+              Previous
+            </button>
+            <button
+              id="next-btn"
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="results-page" class="hidden max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-2xl font-semibold mb-6 text-center">Your Results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <canvas id="political-compass"></canvas>
+            </div>
+            <div id="results-breakdown" class="space-y-4">
+              <!-- Results will be populated here -->
+            </div>
+          </div>
+          <div class="mt-8 text-center">
+            <button
+              id="restart-test"
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Take Test Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
